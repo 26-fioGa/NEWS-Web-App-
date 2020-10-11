@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!--
+  Customize this policy to fit your own app's needs. For more guidance, see:
+      https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+  Some notes:
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+      * Enable inline JS: add 'unsafe-inline' to default-src
+  -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+
+    <meta name="theme-color" content="#007aff">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>News</title>
+    <!-- web-start -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+    <link rel="icon" href="assets/icons/news.png">
+
+    <!-- web-end -->
+    <link rel="stylesheet" href="framework7/css/framework7.bundle.min.css">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+    <div id="app" class="page theme-dark">
+        <!-- Right panel with reveal effect-->
+        <div class="panel panel-left panel-reveal theme-dark">
+            <div class="view">
+                <div class="page">
+                    <div class="navbar">
+                        <div class="navbar-bg"></div>
+                        <div class="navbar-inner">
+                            <div class="title">Menú</div>
+                        </div>
+                    </div>
+                    <div class="page-content">
+                        <a href="/#/" class="item-content item-link">
+                            <div class="block">
+                                <div class="item-title">Recientes</div>
+                            </div>
+                        </a>
+                        <a href="/#/" class="item-content item-link">
+                            <div class="block">
+                                <div class="item-title">Destacados</div>
+                            </div>
+                        </a>
+                        <a href="/#/" class="item-content item-link">
+                            <div class="block">
+                                <div class="item-title">Favoritos</div>
+                            </div>
+                        </a>
+                        <a href="/about/" class="item-content item-link">
+                            <div class="block">
+                                <div class="item-title">About</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main view-init safe-areas">
+            <div class="page" data-name="home">
+                <!-- Top Navbar -->
+                <div class="navbar navbar-large">
+                    <div class="navbar-bg"></div>
+                    <div class="navbar-inner">
+                        <div class="left">
+                            <a href="#" class="link icon-only panel-open" data-panel="left">
+                                <i class="icon f7-icons if-not-md">menu</i>
+                                <i class="icon material-icons if-md">menu</i>
+                            </a>
+                        </div>
+                        <div class="title sliding">NEWS</div>
+                        <div class="segmented right">
+                            <div class="col-resizable">
+                                <a href="#" class="button button-round  login-screen-open" data-login-screen="#my-login-screen">Login</a>
+                            </div>
+                            <div class="col-resizable">
+                                <a href="/form/" class="button button-round  ">Register</a>
+                            </div>
+                        </div>
+
+
+                        <div class="title-large">
+                            <div class="title-large-text">NEWS</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scrollable page content-->
+                <div class="page-content">
+
+                    <div class="card demo-card-header-pic">
+                        <div style="background-image:url(../images/trump.jpg)" class="card-header align-items-flex-end"></div>
+                        <div class="card-content card-content-padding">
+                            <p>Donald Trump reapareció en el balcón de la Casa Blanca tras infectase de COVID-19: "Me siento genial". El presidente de los Estados Unidos se refirió nuevamente al nuevo coronavirus como el "virus de China" cuando reapareció
+                                este sábado sin llevar mascarillas desde el balcón de la Casa Blanca. </p>
+                        </div>
+                        <div class="card-footer"><a href="#" class="link">Marcar como favorito</a><a href="#" class="link">Leer más</a></div>
+                    </div>
+                    <div class="card demo-card-header-pic">
+                        <div style="background-image:url(../images/carrillo.jpg)" class="card-header align-items-flex-end"></div>
+                        <div class="card-content card-content-padding">
+                            <p>Con doblete de André Carrillo, Perú empata con Paraguay 2-2, en su primer partido de eliminatorias rumbo a Qatar 2022. Perú supo reponerse a una remontada y logró un empate ante Paraguay en el inicio de las Eliminatorias Qatar
+                                2022. André Carrillo fue figura con un doblete.</p>
+                        </div>
+                        <div class="card-footer"><a href="#" class="link">Marcar como favorito</a><a href="#" class="link">Leer más</a></div>
+                    </div>
+
+
+                    <div class="card demo-card-header-pic">
+                        <div style="background-image:url(../images/covid.jpg)" class="card-header align-items-flex-end"></div>
+                        <div class="card-content card-content-padding">
+                            <p>América Latina supera los 10 millones de casos y Europa se cierra un poco más ante la pandemia En América Latina y el Caribe se contabilizaron 10 003 822 contagios, 366 702 de los cuales se tradujeron en muertes. Más de la
+                                mitad de las infecciones se sitúan en Brasil, que registra 5 055 888 contagios y está a punto de superar los 150 000 decesos.</p>
+                        </div>
+                        <div class="card-footer"><a href="#" class="link">Marcar como favorito</a><a href="#" class="link">Leer más</a></div>
+                    </div>
+                    <div class="card demo-card-header-pic">
+                        <div style="background-image:url(../images/nobel.jpg)" class="card-header align-items-flex-end"></div>
+                        <div class="card-content card-content-padding">
+                            <p>Premios Nobel 2020: Dos mujeres genetistas ganaron galardón de Química | VIDEO La francesa Emmanuelle Charpentier y la estadounidense Jennifer Doudna recibieron el galardón por sus investigaciones sobre las “tijeras moleculares”,
+                                capaces de modificar los genes humanos.</p>
+                        </div>
+                        <div class="card-footer"><a href="#" class="link">Marcar como favorito</a><a href="#" class="link">Leer más</a></div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">Te puede interesar</div>
+                        <div class="card-content">
+                            <div class="list media-list">
+                                <ul>
+                                    <li class="item-content">
+                                        <div class="item-media"><img src="../images/batman.jpg" width="44" /></div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">¿'The Batman' se cancelará? rumores apuntan a problemas entre Robert Pattinson y Matt Reeves</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="item-content">
+                                        <div class="item-media"><img src="../images/trump2.jpg" width="44" /></div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">Segundo debate entre Donald Trump y Joe Biden fue cancelado</div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  
+                    <div class="block-title">Navigation</div>
+                    <div class="list">
+                        <ul>
+                            <li>
+                                <a href="/form/" class="item-content item-link">
+                                    <div class="item-inner">
+                                        <div class="item-title">Form</div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="block-title">Modals</div>
+                    <div class="block block-strong">
+                        <div class="row">
+                            <div class="col-50">
+                                <a href="#" class="button button-raised button-fill popup-open" data-popup="#my-popup">Popup</a>
+                            </div>
+                            <div class="col-50">
+                                <a href="#" class="button button-raised button-fill login-screen-open" data-login-screen="#my-login-screen">Login Screen</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="block-title">Panels</div>
+                    <div class="block block-strong">
+                        <div class="row">
+                            <div class="col-50">
+                                <a href="#" class="button button-raised button-fill panel-open" data-panel="left">Left Panel</a>
+                            </div>
+                            <div class="col-50">
+                                <a href="#" class="button button-raised button-fill panel-open" data-panel="right">Right Panel</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="list links-list">
+                        <ul>
+                            <li>
+                                <a href="/dynamic-route/blog/45/post/125/?foo=bar#about">Dynamic (Component) Route</a>
+                            </li>
+                            <li>
+                                <a href="/load-something-that-doesnt-exist/">Default Route (404)</a>
+                            </li>
+                            <li>
+                                <a href="/request-and-load/user/123456/">Request Data & Load</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+-->
+
+                    <!-- Popup 
+        <div class="popup" id="my-popup">
+            <div class="view">
+                <div class="page">
+                    <div class="navbar">
+                        <div class="navbar-bg"></div>
+                        <div class="navbar-inner">
+                            <div class="title">Popup</div>
+                            <div class="right">
+                                <a href="#" class="link popup-close">Close</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-content">
+                        <div class="block">
+                            <p>Popup content goes here.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+
+                    <!-- Login Screen -->
+                    <div class="login-screen" id="my-login-screen">
+                        <div class="view">
+                            <div class="page">
+                                <div class="page-content login-screen-content">
+                                    <div class="login-screen-title">Login</div>
+                                    <div class="list">
+                                        <ul>
+                                            <li class="item-content item-input">
+                                                <div class="item-inner">
+                                                    <div class="item-title item-label">Username</div>
+                                                    <div class="item-input-wrap">
+
+                                                        <input type="text" name="username" placeholder="Your username">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="item-content item-input">
+                                                <div class="item-inner">
+                                                    <div class="item-title item-label">Password</div>
+                                                    <div class="item-input-wrap">
+
+                                                        <input type="password" name="password" placeholder="Your password">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="list">
+                                        <ul>
+                                            <li>
+
+                                                <a href="#" class="item-link list-button login-button">Sign In</a>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- CORDOVA_PLACEHOLDER_DONT_REMOVE -->
+                <!-- Framework7 library -->
+                <script src="framework7/js/framework7.bundle.min.js"></script>
+                <!-- Cordova APIs -->
+                <script src="js/cordova-app.js"></script>
+                <!-- App routes -->
+                <script src="js/routes.js"></script>
+                <!-- App scripts -->
+                <script src="js/app.js"></script>
+</body>
+
+</html>
